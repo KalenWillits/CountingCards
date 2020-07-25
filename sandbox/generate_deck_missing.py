@@ -5,13 +5,13 @@ import pandas as pd
 cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A']
 suits = ['♥', '♦', '♠', '♣']
 
-pre_deck = []
-
 for suit in suits:
     for card in cards:
         pre_deck.append([card,suit])
 
-pre_deck.pop(np.random.randint(len(pre_deck)))
+
+for i in num_cards_to_remove:
+    pre_deck.pop(np.random.randint(len(pre_deck)))
 
 num_observations = 10000
 
